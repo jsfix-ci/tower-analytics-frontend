@@ -181,6 +181,50 @@ class BarChart extends Component {
       .ease(d3.easeCubic)
       .attr('y', (d) => y(d[1]))
       .attr('height', (d) => y(d[0]) - y(d[1]));
+    /* TODO: JSFIX could not patch the breaking change:
+    Remove d3.event and changed the interface for the listeners parsed to .on() methods 
+    Suggested fix: 
+    This is only breaking if the second argument to .on() is being parsed the “index” (i) and “elements” (e) as arguments. 
+    The signature of the listeners have been changed to now only take the event object and the “datum” (d) (which it already did).
+    To get the existing “index” and “elements” functionality you can inside the listener use
+        const selection = event.selection;
+        const e = selection.nodes();
+        const i = e.indexOf(this);
+    For further details see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#events. 
+     */
+    /* TODO: JSFIX could not patch the breaking change:
+    Remove d3.event and changed the interface for the listeners parsed to .on() methods 
+    Suggested fix: 
+    This is only breaking if the second argument to .on() is being parsed the “index” (i) and “elements” (e) as arguments. 
+    The signature of the listeners have been changed to now only take the event object and the “datum” (d) (which it already did).
+    To get the existing “index” and “elements” functionality you can inside the listener use
+        const selection = event.selection;
+        const e = selection.nodes();
+        const i = e.indexOf(this);
+    For further details see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#events. 
+     */
+    /* TODO: JSFIX could not patch the breaking change:
+    Remove d3.event and changed the interface for the listeners parsed to .on() methods 
+    Suggested fix: 
+    This is only breaking if the second argument to .on() is being parsed the “index” (i) and “elements” (e) as arguments. 
+    The signature of the listeners have been changed to now only take the event object and the “datum” (d) (which it already did).
+    To get the existing “index” and “elements” functionality you can inside the listener use
+        const selection = event.selection;
+        const e = selection.nodes();
+        const i = e.indexOf(this);
+    For further details see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#events. 
+     */
+    /* TODO: JSFIX could not patch the breaking change:
+    Remove d3.event and changed the interface for the listeners parsed to .on() methods 
+    Suggested fix: 
+    This is only breaking if the second argument to .on() is being parsed the “index” (i) and “elements” (e) as arguments. 
+    The signature of the listeners have been changed to now only take the event object and the “datum” (d) (which it already did).
+    To get the existing “index” and “elements” functionality you can inside the listener use
+        const selection = event.selection;
+        const e = selection.nodes();
+        const i = e.indexOf(this);
+    For further details see the official migration guide here: https://observablehq.com/@d3/d3v6-migration-guide#events. 
+     */
     layer
       .selectAll('rect')
       .on('mouseover', barTooltip.handleMouseOver)
